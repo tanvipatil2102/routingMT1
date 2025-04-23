@@ -1,0 +1,12 @@
+<div class="row mt-3">
+    <div class="col-md-3 offset-md-2">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let prod of prodData" [routerLink]="['/products', prod.pId]">
+                {{prod.pName}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6 text-right">
+        <button class="btn btn-primary" routerLink="addProd">Add Product</button>
+    </div>
+</div>
