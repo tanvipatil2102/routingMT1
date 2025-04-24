@@ -18,8 +18,8 @@ export class ProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.pId = this.routes.snapshot.params['pId'];
     if(this.pId){
-      this.pId = this.routes.snapshot.params['pId'];
       this.getProdObj = this._productService.getProdInfo(this.pId);
     }   
   }
